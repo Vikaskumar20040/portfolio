@@ -1,0 +1,646 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Vikas Portfolio</title>
+
+    <link rel="stylesheet"
+    href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- LOADER -->
+
+    <div id="loader">
+
+        <div class="loader-circle"></div>
+
+        <h2>Loading Portfolio...</h2>
+
+    </div>
+
+    <!-- FLOATING ICONS -->
+
+    <div class="floating-icons">
+
+        <span>💻</span>
+
+        <span>⚡</span>
+
+        <span>🤖</span>
+
+        <span>🌐</span>
+
+        <span>📱</span>
+
+        <span>🚀</span>
+
+    </div>
+
+    <!-- PROGRESS BAR -->
+
+    <div id="scroll-percent">
+        0%
+    </div>
+
+    <div id="progress-bar"></div>
+
+    <!-- CUSTOM CURSOR -->
+
+    <div class="cursor"></div>
+    <div id="spark-container"></div>
+
+    <!-- NAVBAR -->
+
+    <nav>
+        <h2 class="logo">VikasKumar</h2>
+
+        <ul>
+
+            <li>
+                <a href="#home" class="active">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#about">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="#skills">
+                    Skills
+                </a>
+            </li>
+
+            <li>
+                <a href="#projects">
+                    Projects
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="nav-right">
+
+            <!-- LIVE CLOCK -->
+
+            <div class="nav-clock">
+
+                <span id="clock"></span>
+
+                <span id="date"></span>
+
+            </div>
+
+            <!-- THEME BUTTON -->
+
+            <button id="theme-toggle">
+                🌙
+            </button>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero"
+    id="home">
+
+        <img src="profile.jpg"
+        alt="Profile Image"
+        class="profile-img">
+
+        <h1>
+            Hello, I'm Vikas Kumar
+        </h1>
+
+        <p id="typing-text"></p>
+
+        <div class="hero-buttons">
+
+            <a href="#projects">
+
+                <button>
+                    View My Work
+                </button>
+
+            </a>
+
+            <a href="resume.pdf"
+            download>
+
+                <button>
+                    Download Resume
+                </button>
+
+            </a>
+
+        </div>
+
+        <!-- SOCIAL ICONS -->
+
+        <!-- <div class="social-icons">
+
+            <a href="#">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+        </div> -->
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section class="about hidden"
+    id="about">
+
+        <h2>About Me</h2>
+
+        <p>
+
+            I am a Software Engineering student passionate about AI, Web Development, 
+            Dicision Thinking, Organizer, and Problem Solving.
+
+        </p>
+
+    </section>
+
+    <!-- STATS -->
+
+    <section class="stats hidden">
+
+        <div class="stat-box">
+
+            <h2 class="counter"
+            data-target="1">
+
+                0
+
+            </h2>
+
+            <p>Projects</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h2 class="counter"
+            data-target="10">
+
+                0
+
+            </h2>
+
+            <p>Skills</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h2 class="counter"
+            data-target="5">
+
+                0
+
+            </h2>
+
+            <p>Certificates</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h2 class="counter"
+            data-target="500">
+
+                0
+
+            </h2>
+
+            <p>Coding Hours</p>
+
+        </div>
+
+    </section>
+
+    <!-- TESTIMONIALS -->
+
+    <section class="testimonials hidden">
+
+        <h2>Testimonials</h2>
+
+        <div class="testimonial-container">
+
+            <div class="testimonial-card">
+
+                <p>
+
+                    "Amazing developer
+                    with great creativity
+                    and problem solving
+                    skills."
+
+                </p>
+
+                <h3>
+                    - Rahul Sharma
+                </h3>
+
+            </div>
+
+            <div class="testimonial-card">
+
+                <p>
+
+                    "Very hardworking and
+                    passionate about AI
+                    and Web Development."
+
+                </p>
+
+                <h3>
+                    - Aman Verma
+                </h3>
+
+            </div>
+
+            <div class="testimonial-card">
+
+                <p>
+
+                    "Professional portfolio
+                    and excellent frontend
+                    skills."
+
+                </p>
+
+                <h3>
+                    - Priya Das
+                </h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SKILLS -->
+
+    <section class="skills hidden"
+    id="skills">
+
+        <h2>My Skills</h2>
+
+        <div class="skill-container">
+
+            <div class="skill-container">
+
+                <!-- HTML -->
+            
+                <div class="skill-card">
+            
+                    <h3>HTML</h3>
+            
+                    <div class="skill-bar">
+            
+                        <div class="skill-progress html">
+                            95%
+                        </div>
+            
+                    </div>
+            
+                </div>
+            
+                <!-- CSS -->
+            
+                <div class="skill-card">
+            
+                    <h3>CSS</h3>
+            
+                    <div class="skill-bar">
+            
+                        <div class="skill-progress css">
+                            90%
+                        </div>
+            
+                    </div>
+            
+                </div>
+            
+                <!-- JS -->
+            
+                <div class="skill-card">
+            
+                    <h3>JavaScript</h3>
+            
+                    <div class="skill-bar">
+            
+                        <div class="skill-progress js">
+                            80%
+                        </div>
+            
+                    </div>
+            
+                </div>
+            
+                <!-- JAVA -->
+            
+                <div class="skill-card">
+            
+                    <h3>Java</h3>
+            
+                    <div class="skill-bar">
+            
+                        <div class="skill-progress java">
+                            75%
+                        </div>
+            
+                    </div>
+            
+                </div>
+            
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section class="projects hidden"
+    id="projects">
+
+        <h2>My Projects</h2>
+
+        <div class="filter-buttons">
+
+            <button class="filter-btn active-filter"
+            data-filter="all">
+        
+                All
+        
+            </button>
+        
+            <button class="filter-btn"
+            data-filter="web">
+        
+                Web
+        
+            </button>
+        
+            <button class="filter-btn"
+            data-filter="ai">
+        
+                AI
+        
+            </button>
+        
+            <button class="filter-btn"
+            data-filter="app">
+        
+                App
+        
+            </button>
+        
+        </div>
+
+        <div class="project-container">
+
+            <!-- PROJECT 1 -->
+
+            <div class="project-card web">
+
+                <img src="project1.jpg"
+                alt="Project">
+
+                <h3>
+                    Portfolio Website
+                </h3>
+
+                <p>
+
+                    Personal portfolio
+                    website using HTML,
+                    CSS and JavaScript.
+
+                </p>
+
+                <div class="project-buttons">
+
+                    <a href="#">
+
+                        <button>
+                            Live Demo
+                        </button>
+
+                    </a>
+
+                    <a href="#">
+
+                        <button>
+                            Source Code
+                        </button>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- PROJECT 2 -->
+
+            <div class="project-card aap">
+
+                <img src="project2.jpeg"
+                alt="Project">
+
+                <h3>
+                    Task Manager
+                </h3>
+
+                <p>
+
+                    Task management
+                    application for daily
+                    productivity.
+
+                </p>
+
+                <div class="project-buttons">
+
+                    <a href="#">
+
+                        <button>
+                            Live Demo
+                        </button>
+
+                    </a>
+
+                    <a href="#">
+
+                        <button>
+                            Source Code
+                        </button>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="contact hidden"
+    id="contact">
+
+        <h2>Contact Me</h2>
+
+        <form>
+
+            <input type="text"
+            placeholder="Your Name">
+
+            <input type="email"
+            placeholder="Your Email">
+
+            <textarea
+            placeholder="Your Message"></textarea>
+
+            <button type="submit">
+
+                Send Message
+
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+
+            © 2026 Vikas Kumar |
+            All Rights Reserved
+
+        </p>
+
+    </footer>
+
+    <!-- MUSIC -->
+
+    <audio id="bg-music"
+    loop>
+
+        <source src="music.mp3"
+        type="audio/mp3">
+
+    </audio>
+
+    <button id="music-btn">
+        🎵
+    </button>
+
+    <!-- IMAGE POPUP -->
+
+<div id="image-popup">
+
+    <span id="close-popup">
+        ✖
+    </span>
+
+    <img id="popup-img"
+    src=""
+    alt="Popup Image">
+
+</div>
+
+<!-- SOCIAL SIDEBAR -->
+
+<div class="social-sidebar">
+
+    <a href="https://github.com/Vikaskumar20040"
+target="_blank">
+
+    <i class="fa-brands fa-github"></i>
+
+</a>
+
+<a href=
+"https://www.linkedin.com/in/kumar-vikas-130110330/"
+target="_blank">
+
+    <i class="fa-brands fa-linkedin"></i>
+
+</a>
+
+<a href=
+"https://www.instagram.com/adhyaksji?igsh=ajZiMWpkNHc2NG1t"
+target="_blank">
+
+    <i class="fa-brands fa-instagram"></i>
+
+</a>
+
+<a href=
+"https://www.facebook.com/share/1bnXgXwiwz/"
+target="_blank">
+
+    <i class="fa-brands fa-facebook-f"></i>
+
+</a>
+    
+    <a href="#">
+        <i class="fa-brands fa-x-twitter"></i>
+    </a>
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+    <script src="script.js"></script>
+
+    <div id="particles-js"></div>
+
+</body>
+
+</html>
