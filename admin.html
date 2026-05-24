@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Secret Admin Login</title>
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+
+        *{
+
+            margin: 0;
+            padding: 0;
+
+            box-sizing: border-box;
+        }
+
+        body{
+
+            font-family: Arial, sans-serif;
+
+            height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            overflow: hidden;
+
+            background:
+            linear-gradient(
+            135deg,
+            #020617,
+            #0f172a,
+            #111827
+            );
+        }
+
+        /* ANIMATED BACKGROUND */
+
+        .bg{
+
+            position: absolute;
+
+            width: 100%;
+            height: 100%;
+
+            overflow: hidden;
+
+            z-index: -1;
+        }
+
+        .bg span{
+
+            position: absolute;
+
+            display: block;
+
+            width: 20px;
+            height: 20px;
+
+            background: rgba(56,189,248,0.15);
+
+            animation: animate 15s linear infinite;
+
+            bottom: -150px;
+
+            border-radius: 50%;
+        }
+
+        .bg span:nth-child(1){
+
+            left: 10%;
+
+            width: 80px;
+            height: 80px;
+
+            animation-duration: 12s;
+        }
+
+        .bg span:nth-child(2){
+
+            left: 25%;
+
+            width: 40px;
+            height: 40px;
+
+            animation-duration: 18s;
+        }
+
+        .bg span:nth-child(3){
+
+            left: 45%;
+
+            width: 60px;
+            height: 60px;
+
+            animation-duration: 14s;
+        }
+
+        .bg span:nth-child(4){
+
+            left: 70%;
+
+            width: 100px;
+            height: 100px;
+
+            animation-duration: 20s;
+        }
+
+        .bg span:nth-child(5){
+
+            left: 90%;
+
+            width: 50px;
+            height: 50px;
+
+            animation-duration: 16s;
+        }
+
+        @keyframes animate{
+
+            0%{
+
+                transform:
+                translateY(0)
+                rotate(0deg);
+
+                opacity: 1;
+            }
+
+            100%{
+
+                transform:
+                translateY(-1000px)
+                rotate(720deg);
+
+                opacity: 0;
+            }
+        }
+
+        /* LOGIN BOX */
+
+        .login-box{
+
+            width: 350px;
+
+            padding: 40px;
+
+            border-radius: 25px;
+
+            background:
+            rgba(255,255,255,0.05);
+
+            border:
+            1px solid rgba(255,255,255,0.1);
+
+            backdrop-filter: blur(15px);
+
+            text-align: center;
+
+            box-shadow:
+            0 0 30px rgba(56,189,248,0.2);
+        }
+
+        .login-box h1{
+
+            color: #facc15;
+
+            margin-bottom: 10px;
+
+            font-size: 32px;
+        }
+
+        .login-box p{
+
+            color: #cbd5e1;
+
+            margin-bottom: 30px;
+        }
+
+        .icon{
+
+            font-size: 60px;
+
+            color: #38bdf8;
+
+            margin-bottom: 20px;
+        }
+
+        input{
+
+            width: 100%;
+
+            padding: 15px;
+
+            margin-top: 15px;
+
+            border: none;
+
+            outline: none;
+
+            border-radius: 12px;
+
+            background:
+            rgba(255,255,255,0.08);
+
+            color: white;
+
+            font-size: 16px;
+        }
+
+        input::placeholder{
+
+            color: #cbd5e1;
+        }
+
+        button{
+
+            width: 100%;
+
+            padding: 15px;
+
+            margin-top: 25px;
+
+            border: none;
+
+            border-radius: 12px;
+
+            background: #38bdf8;
+
+            color: white;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        button:hover{
+
+            transform: translateY(-3px);
+
+            box-shadow:
+            0 0 20px rgba(56,189,248,0.6);
+        }
+
+        .bottom-text{
+
+            margin-top: 20px;
+
+            color: #94a3b8;
+
+            font-size: 14px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- BACKGROUND -->
+
+    <div class="bg">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+    <!-- LOGIN BOX -->
+
+    <div class="login-box">
+
+        <div class="icon">
+
+            <i class="fa-solid fa-user-secret"></i>
+
+        </div>
+
+        <h1>Admin Access</h1>
+
+        <p>Authorized Access Only 🚀</p>
+
+        <input type="password"
+        id="password"
+        placeholder="Enter Admin Password">
+
+        <button onclick="login()">
+
+            Login
+
+        </button>
+
+        <div class="bottom-text">
+
+            Secure Portfolio Dashboard 😎🔥
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function login(){
+
+            const password =
+            document.getElementById("password").value;
+
+            if(password === "vikasbabu9090"){
+
+                window.location.href =
+                "dashboard.html";
+
+            }else{
+
+                alert("Wrong Password ❌");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

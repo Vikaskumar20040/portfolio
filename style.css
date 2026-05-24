@@ -1,5 +1,18 @@
 /* style.css */
 
+:root{
+
+    --primary: #38bdf8;
+
+    --dark: #0f172a;
+
+    --card: rgba(30,41,59,0.7);
+
+    --text: #f8fafc;
+
+    --yellow: #facc15;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -14,19 +27,15 @@ body{
 
     font-family: Arial, sans-serif;
 
-    background: linear-gradient(
-    -45deg,
-    #7c8b26,
-    #000000,
-    #060e1efc,
-    #2359d629
+    background:
+    linear-gradient(
+    135deg,
+    #020617,
+    #0f172a,
+    #111827
     );
 
-    background-size: 400% 400%;
-
-    animation: gradientBG 10s ease infinite;
-
-    color: rgb(252, 239, 6);
+    color: var(--text);
 
     overflow-x: hidden;
 }
@@ -40,7 +49,7 @@ body{
     width: 100%;
     height: 100vh;
 
-    background: #95fc05;
+    background: #f6f7f4;
 
     display: flex;
 
@@ -52,7 +61,7 @@ body{
 
     z-index: 999999;
 
-    transition: 1s;
+    transition: 5s;
 }
 
 .loader-circle{
@@ -60,9 +69,9 @@ body{
     width: 40px;
     height: 40px;
 
-    border: 8px solid #0e203e;
+    border: 8px solid #18305a;
 
-    border-top: 8px solid #1e63ee;
+    border-top: 8px solid #02102b;
 
     border-radius: 50%;
 
@@ -151,7 +160,7 @@ body{
 
     height: 5px;
 
-    background: #25eb25;
+    background: #e7c906;
 
     z-index: 99999;
 }
@@ -163,7 +172,7 @@ body{
     width: 20px;
     height: 20px;
 
-    background: #25ebe8;
+    background: #25eb88;
 
     border-radius: 50%;
 
@@ -173,7 +182,7 @@ body{
 
     transform: translate(-50%, -50%);
 
-    box-shadow: 0 0 20px #25eba6;
+    box-shadow: 0 0 20px #020a07;
 
     z-index: 9999;
 }
@@ -188,33 +197,31 @@ nav{
 
     align-items: center;
 
-    padding: 20px 50px;
+    padding: 18px 40px;
 
-    background: rgba(17,24,39,0.8);
+    background: rgba(2,6,23,0.8);
 
     position: sticky;
 
     top: 0;
 
-    backdrop-filter: blur(10px);
-
     z-index: 999;
 
-    border-bottom:
-    1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
 
-    box-shadow:
-    0 0 20px rgba(37,99,235,0.2);
+    border-bottom:
+    1px solid rgba(56,189,248,0.2);
 }
 
 .logo{
 
-    font-size: 25px;
+    font-size: 30px;
 
-    color: #f8ea53cc;
+    font-weight: bold;
 
-    text-shadow:
-    0 0 15px rgba(60, 110, 218, 0.7);
+    color: var(--yellow);
+
+    letter-spacing: 1px;
 }
 
 /* NAV UNDERLINE */
@@ -238,7 +245,7 @@ nav ul li a::after{
 
     bottom: -5px;
 
-    background: #2563eb;
+    background: #513ee1;
 
     transition: 0.3s;
 }
@@ -259,7 +266,7 @@ ul{
 
 ul li a{
 
-    color: rgb(255, 255, 255);
+    color: rgb(190, 188, 202);
 
     text-decoration: none;
 
@@ -271,12 +278,12 @@ ul li a{
 
 ul li a:hover{
 
-    color: #b9abe1;
+    color: #f8ea53cc;
 }
 
 ul li a.active{
 
-    color: #2563eb;
+    color: #b3bbc8;
 }
 
 /* NAV RIGHT */
@@ -323,7 +330,7 @@ ul li a.active{
 
     padding: 10px 10px;
 
-    border: rgb(157, 26, 26);
+    border: rgb(20, 8, 8);
 
     border-radius: 100px;
 
@@ -360,9 +367,9 @@ ul li a.active{
 
     object-fit: cover;
 
-    border: 5px solid #25eb4650;
+    border: 5px solid #0c21df;
 
-    box-shadow: 0 0 25px rgba(35, 91, 212, 0.139);
+    box-shadow: 0 0 25px rgba(34, 89, 207, 0.139);
 
     margin-bottom: 25px;
 
@@ -380,7 +387,7 @@ ul li a.active{
 
     font-size: 25px;
 
-    color: #f4f4f4;
+    color: #abaaa9;
 
     margin-bottom: 30px;
 }
@@ -398,28 +405,31 @@ ul li a.active{
 
 button{
 
-    padding: 15px 35px;
+    padding: 14px 30px;
 
     border: none;
 
-    border-radius: 10px;
+    border-radius: 12px;
 
-    background: #2563eb;
+    background: var(--primary);
 
     color: white;
 
     cursor: pointer;
 
-    font-size: 18px;
+    font-size: 16px;
+
+    font-weight: bold;
 
     transition: 0.3s;
 }
 
 button:hover{
 
-    background: #1d4ed8;
+    transform: translateY(-3px);
 
-    transform: scale(1.05);
+    box-shadow:
+    0 0 20px rgba(56,189,248,0.5);
 }
 
 /* SOCIAL ICONS */
@@ -482,14 +492,14 @@ button:hover{
 
     justify-content: center;
 
-    gap: 30px;
+    gap: 20px;
 
     flex-wrap: wrap;
 }
 
 .stat-box{
 
-    background: rgba(30,41,59,0.7);
+    background: rgba(29, 41, 59, 0.952);
 
     padding: 40px;
 
@@ -517,16 +527,16 @@ button:hover{
 
     justify-content: center;
 
-    gap: 30px;
+    gap: 20px;
 
     flex-wrap: wrap;
 }
 
 .testimonial-card{
 
-    background: rgba(30,41,59,0.7);
+    background: rgba(33, 50, 78, 0.747);
 
-    width: 320px;
+    width: 220px;
 
     padding: 30px;
 
@@ -548,7 +558,7 @@ button:hover{
 
 .skill-card{
 
-    background: rgba(30,41,59,0.7);
+    background: rgba(34, 50, 75, 0.7);
 
     padding: 30px 50px;
 
@@ -563,7 +573,7 @@ button:hover{
 
     transform: translateY(-10px);
 
-    background: #2563eb;
+    background: #1a58d3;
 }
 
 /* PROJECTS */
@@ -581,15 +591,20 @@ button:hover{
 
 .project-card{
 
-    background: rgba(30,41,59,0.7);
+    background: var(--card);
 
-    width: 300px;
+    width: 320px;
 
-    padding: 30px;
+    padding: 25px;
 
-    border-radius: 15px;
+    border-radius: 20px;
 
-    transition: 0.3s;
+    transition: 0.4s;
+
+    backdrop-filter: blur(10px);
+
+    border:
+    1px solid rgba(255,255,255,0.05);
 }
 
 .project-card:hover{
@@ -623,7 +638,7 @@ button:hover{
 
 form{
 
-    max-width: 600px;
+    max-width: 500px;
 
     margin: auto;
 
@@ -670,15 +685,17 @@ footer{
 
     position: fixed;
 
-    bottom: 30px;
-    left: 30px;
+    bottom: 20px;
 
-    width: 60px;
-    height: 60px;
+    left: 20px;
+
+    width: 55px;
+
+    height: 55px;
 
     border-radius: 50%;
 
-    font-size: 25px;
+    font-size: 22px;
 
     z-index: 99999;
 }
@@ -705,7 +722,7 @@ footer{
 
 .light-mode{
 
-    background: white;
+    background: rgb(53, 21, 21);
 
     color: black;
 }
@@ -1130,5 +1147,88 @@ footer{
 
     box-shadow:
     0 0 20px rgba(37,99,235,0.7);
+}
+
+/* SCROLL TOP BUTTON */
+
+#scrollTopBtn{
+
+    position: fixed;
+
+    bottom: 30px;
+
+    right: 20px;
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: var(--primary);
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    display: none;
+
+    z-index: 99999;
+}
+
+/* MOBILE MENU */
+
+.mobile-menu-btn{
+
+    display: none;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    nav{
+
+        padding: 20px;
+    }
+
+    nav ul{
+
+        display: none;
+    }
+
+    .mobile-menu-btn{
+
+        display: block;
+    }
+
+    .hero h1{
+
+        font-size: 38px;
+    }
+
+    .profile-img{
+
+        width: 140px;
+        height: 140px;
+    }
+
+    .project-card{
+
+        width: 100%;
+    }
+
+    .social-sidebar{
+
+        display: none;
+    }
 }
 

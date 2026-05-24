@@ -22,6 +22,8 @@
 
 <body>
 
+    <div class="bg-animation"></div>
+
     <!-- LOADER -->
 
     <div id="loader">
@@ -67,6 +69,12 @@
 
     <nav>
         <h2 class="logo">VikasKumar</h2>
+
+        <div class="mobile-menu-btn">
+
+            ☰
+        
+        </div>
 
         <ul>
 
@@ -128,8 +136,7 @@
 
     <!-- HERO SECTION -->
 
-    <section class="hero"
-    id="home">
+    <section class="hero" id="home">
 
         <img src="profile.jpg"
         alt="Profile Image"
@@ -151,8 +158,7 @@
 
             </a>
 
-            <a href="resume.pdf"
-            download>
+            <a href="resume.pdf" download>
 
                 <button>
                     Download Resume
@@ -184,8 +190,7 @@
 
     <!-- ABOUT -->
 
-    <section class="about hidden"
-    id="about">
+    <section class="about hidden" id="about">
 
         <h2>About Me</h2>
 
@@ -204,8 +209,7 @@
 
         <div class="stat-box">
 
-            <h2 class="counter"
-            data-target="1">
+            <h2 class="counter" data-target="1">
 
                 0
 
@@ -230,8 +234,7 @@
 
         <div class="stat-box">
 
-            <h2 class="counter"
-            data-target="5">
+            <h2 class="counter" data-target="5">
 
                 0
 
@@ -243,8 +246,7 @@
 
         <div class="stat-box">
 
-            <h2 class="counter"
-            data-target="500">
+            <h2 class="counter" data-target="500">
 
                 0
 
@@ -319,8 +321,7 @@
 
     <!-- SKILLS -->
 
-    <section class="skills hidden"
-    id="skills">
+    <section class="skills hidden" id="skills">
 
         <h2>My Skills</h2>
 
@@ -400,36 +401,31 @@
 
     <!-- PROJECTS -->
 
-    <section class="projects hidden"
-    id="projects">
+    <section class="projects hidden" id="projects">
 
         <h2>My Projects</h2>
 
         <div class="filter-buttons">
 
-            <button class="filter-btn active-filter"
-            data-filter="all">
+            <button class="filter-btn active-filter" data-filter="all">
         
                 All
         
             </button>
         
-            <button class="filter-btn"
-            data-filter="web">
+            <button class="filter-btn" data-filter="web">
         
                 Web
         
             </button>
         
-            <button class="filter-btn"
-            data-filter="ai">
+            <button class="filter-btn" data-filter="ai">
         
                 AI
         
             </button>
         
-            <button class="filter-btn"
-            data-filter="app">
+            <button class="filter-btn" data-filter="app">
         
                 App
         
@@ -437,121 +433,38 @@
         
         </div>
 
-        <div class="project-container">
-
-            <!-- PROJECT 1 -->
-
-            <div class="project-card web">
-
-                <img src="project1.jpg"
-                alt="Project">
-
-                <h3>
-                    Portfolio Website
-                </h3>
-
-                <p>
-
-                    Personal portfolio
-                    website using HTML,
-                    CSS and JavaScript.
-
-                </p>
-
-                <div class="project-buttons">
-
-                    <a href="#">
-
-                        <button>
-                            Live Demo
-                        </button>
-
-                    </a>
-
-                    <a href="#">
-
-                        <button>
-                            Source Code
-                        </button>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- PROJECT 2 -->
-
-            <div class="project-card aap">
-
-                <img src="project2.jpeg"
-                alt="Project">
-
-                <h3>
-                    Task Manager
-                </h3>
-
-                <p>
-
-                    Task management
-                    application for daily
-                    productivity.
-
-                </p>
-
-                <div class="project-buttons">
-
-                    <a href="#">
-
-                        <button>
-                            Live Demo
-                        </button>
-
-                    </a>
-
-                    <a href="#">
-
-                        <button>
-                            Source Code
-                        </button>
-
-                    </a>
-
-                </div>
-
-            </div>
-
+        <div class="project-container"
+        id="projects-container">
+            
         </div>
 
     </section>
 
     <!-- CONTACT -->
 
-    <section class="contact hidden"
-    id="contact">
+    <section class="contact hidden" id="contact">
 
-        <h2>Contact Me</h2>
+    <h2>Contact Me</h2>
 
-        <form>
+    <form id="contactForm">
 
-            <input type="text"
-            placeholder="Your Name">
+        <input type="text" id="name" placeholder="Your Name" required>
 
-            <input type="email"
-            placeholder="Your Email">
+        <input type="email" id="email" placeholder="Your Email" required>
 
-            <textarea
-            placeholder="Your Message"></textarea>
+        <textarea id="message" placeholder="Your Message" required></textarea>
 
-            <button type="submit">
+        <button type="submit">
 
-                Send Message
+            Send Message
 
-            </button>
+        </button>
 
-        </form>
+    </form>
 
-    </section>
+    <p id="responseMessage"></p>
+
+</section>
 
     <!-- FOOTER -->
 
@@ -566,13 +479,17 @@
 
     </footer>
 
+    <button id="scrollTopBtn">
+
+        ↑
+    
+    </button>
+
     <!-- MUSIC -->
 
-    <audio id="bg-music"
-    loop>
+    <audio id="bg-music" loop>
 
-        <source src="music.mp3"
-        type="audio/mp3">
+        <source src="music.mp3" type="audio/mp3">
 
     </audio>
 
@@ -588,9 +505,7 @@
         ✖
     </span>
 
-    <img id="popup-img"
-    src=""
-    alt="Popup Image">
+    <img id="popup-img" src="" alt="Popup Image">
 
 </div>
 
@@ -598,32 +513,28 @@
 
 <div class="social-sidebar">
 
-    <a href="https://github.com/Vikaskumar20040"
-target="_blank">
+    <a href="https://github.com/Vikaskumar20040" target="_blank">
 
     <i class="fa-brands fa-github"></i>
 
 </a>
 
 <a href=
-"https://www.linkedin.com/in/kumar-vikas-130110330/"
-target="_blank">
+"https://www.linkedin.com/in/kumar-vikas-130110330/" target="_blank">
 
     <i class="fa-brands fa-linkedin"></i>
 
 </a>
 
 <a href=
-"https://www.instagram.com/adhyaksji?igsh=ajZiMWpkNHc2NG1t"
-target="_blank">
+"https://www.instagram.com/adhyaksji?igsh=ajZiMWpkNHc2NG1t" target="_blank">
 
     <i class="fa-brands fa-instagram"></i>
 
 </a>
 
 <a href=
-"https://www.facebook.com/share/1bnXgXwiwz/"
-target="_blank">
+"https://www.facebook.com/share/1bnXgXwiwz/" target="_blank">
 
     <i class="fa-brands fa-facebook-f"></i>
 
