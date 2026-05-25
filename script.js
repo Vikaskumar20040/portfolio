@@ -372,7 +372,7 @@ scrollTopBtn.addEventListener("click", () => {
 async function loadProjects(){
 
     const response =
-    await fetch("https://portfolio-production-50b3.up.railway.app");
+    await fetch("https://portfolio-production-50b3.up.railway.app/contact");
 
     const projects =
     await response.json();
