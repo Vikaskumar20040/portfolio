@@ -88,7 +88,7 @@ form.addEventListener("submit", async (e) => {
     document.getElementById("message").value;
 
     const response =
-    await fetch("https://portfolio-production-50b3.up.railway.app", {
+    await fetch("https://portfolio-production-50b3.up.railway.app/contact", {
 
         method: "POST",
 
