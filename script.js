@@ -88,7 +88,7 @@ form.addEventListener("submit", async (e) => {
     document.getElementById("message").value;
 
     const response =
-    await fetch("http://localhost:5000/contact", {
+    await fetch("https://railway.com/project/c8fbb3ec-eb84-4dab-b09c-3601c2e7c81a?", {
 
         method: "POST",
 
@@ -372,7 +372,7 @@ scrollTopBtn.addEventListener("click", () => {
 async function loadProjects(){
 
     const response =
-    await fetch("http://localhost:5000/projects");
+    await fetch("https://railway.com/project/c8fbb3ec-eb84-4dab-b09c-3601c2e7c81a?");
 
     const projects =
     await response.json();
